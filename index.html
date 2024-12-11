@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercera Pre Entrega JS</title>
+    <link rel="stylesheet" href=".//css/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">COMPLEJO <span>REDUCCIÓN</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#location">Ubicación</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><button id="login-button" class="btn">Iniciar Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="layout">
+            <section class="content">
+                <h1>Reserva tu <span>Turno</span></h1>
+                <p>Selecciona un horario disponible y asegura tu lugar.</p>
+
+                <div class="reservation-section">
+                    <h2>Turnos Disponibles</h2>
+                    <div id="available-slots" class="slots-grid">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Formulario de Reserva</h2>
+                    <form id="reservation-form">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="slot">Turno:</label>
+                        <select id="slot" name="slot" required>
+                            <option value="" disabled selected>Seleccione un turno</option>
+                        </select>
+
+                        <button type="submit" class="btn">Reservar</button>
+                    </form>
+                    <div id="confirmation-message"></div>
+                </div>
+            </section>
+
+            <aside class="reserved-turns">
+                <h3>Turnos Reservados</h3>
+                <ul id="reservations-list"></ul>
+            </aside>
+        </div>
+
+        <section class="location-section" id="location">
+            <h2>Encuéntranos Aquí</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6677.016073463456!2d-63.86220000000001!3d-33.200775!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sus!4v1733674616174!5m2!1ses!2sus" 
+                class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>COMPLEJO-REDUCCIÓN</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Complejo-Reducción. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src=".//js/slots.js" type="module"></script>
+    <script src=".//js/reservaciones.js" type="module"></script>
+    <script src=".//js/main.js" type="module"></script>
+</body>
+</html>
+
